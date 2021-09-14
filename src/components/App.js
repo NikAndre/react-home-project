@@ -11,11 +11,6 @@ export default class App extends  PureComponent {
         console.log('I updated')
     }
 
-
-
-
-
-
     render() {
        return (
            <div>

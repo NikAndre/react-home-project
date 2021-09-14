@@ -1,6 +1,7 @@
 import React,{useState,useMemo} from 'react'
 import Menu from "./menu";
 import Navigation from "./navigation";
+import Rate from "./rate";
 
 
 
@@ -19,6 +20,7 @@ export default function Restaurants (props){
                 onRestaurantClick = {(id) => {setActiveId(id)} }
             />
             <Menu menu = {activeRestaurant.menu}/>
+            <Rate rate = {5}/>
         </div>
     )
 }

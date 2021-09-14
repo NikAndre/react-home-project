@@ -12,7 +12,6 @@ export default function Restaurants (props){
         [activeId,props.restaurants]
     )
 
-
     return (
         <div>
             <Navigation

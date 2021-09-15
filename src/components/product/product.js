@@ -1,18 +1,20 @@
 import React from 'react'
 import counter from "../hocs/counter";
+import '../../Styles.css'
 
 
 function Product(props){
    const {count,increment,decrement} = props
 
     return(
-        <div>
+        <div className={'wrapper'}>
             <p>{props.product.name}</p>
             <p>{props.product.price} $</p>
-            <button onClick={decrement}> - </button>
-            <p> count  : {count}</p>
-            <button onClick={increment}> + </button>
-
+            <div className={'wrapper'}>
+                <button onClick={decrement}> - </button>
+                <p> count  : {count}</p>
+                <button onClick={increment}> + </button>
+            </div>
         </div>
     )
 

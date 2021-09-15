@@ -15,7 +15,7 @@ export default function Rate(props){
     }
 
     return (
-        <div className={'img-wrapper'}>
+        <div  className={'img-wrapper'}>
             <p>Rating :</p>
             {renderStarRate()}
         </div>

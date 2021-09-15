@@ -2,6 +2,20 @@
     width:20px;
     height: 20px;
 }
+.wrapper{
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .img-wrapper{
     display: flex;
+}
+.review-block{
+    padding-right: 20px;
 }

@@ -1,5 +1,5 @@
 import React,{PureComponent} from 'react'
-import Restaurants from "./restaurant";
+import Restaurants from "./restaurants";
 
 
 
@@ -15,9 +15,6 @@ export default class App extends  PureComponent {
        return (
            <div>
                <Restaurants restaurants = {this.props.restaurants} />
-                <h1>hello from app!</h1>
-
-               <button> + </button>
            </div>
        )
     }

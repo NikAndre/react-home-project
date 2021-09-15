@@ -1,15 +1,19 @@
 import React from 'react'
 import counter from "../hocs/counter";
 import '../../Styles.css'
+import propTypes from 'prop-types'
 
 
-function Product(props){
-   const {count,increment,decrement} = props
+function Product({product, count, increment, decrement}){
+
 
     return(
-        <div className={'wrapper'}>
-            <p>{props.product.name}</p>
-            <p>{props.product.price} $</p>
+        <div key = {product.id} className={'wrapper'}>
+            <div>
+                <p>{product.name}</p>
+                {product.ingredients.map(ingredient => (<p>{ingredient}</p>))}
+            </div>
+            <p>{product.price} $</p>
             <div className={'wrapper'}>
                 <button onClick={decrement}> - </button>
                 <p> count  : {count}</p>
@@ -18,6 +22,18 @@ function Product(props){
         </div>
     )
 
+}
+
+Product.propTypes = {
+    product : propTypes.shape({
+            name: propTypes.string,
+            ingredients: propTypes.array.isRequired,
+            price: propTypes.number
+        }
+    ).isRequired,
+    count: propTypes.number,
+    increment: propTypes.func,
+    decrement: propTypes.func
 }
 
 export default  counter (Product);

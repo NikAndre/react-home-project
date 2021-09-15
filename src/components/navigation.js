@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 export default function Navigation (props){
     return(
@@ -11,4 +12,8 @@ export default function Navigation (props){
             </button> )}
         </div>
     )
+}
+
+Navigation.propTypes = {
+    restaurants: propTypes.array.isRequired
 }

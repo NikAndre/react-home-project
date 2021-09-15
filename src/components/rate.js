@@ -1,9 +1,10 @@
 import React from "react";
 import star from  '../images/star2.jpg'
 import '../Styles.css'
+import propTypes from 'prop-types'
 
 export default function Rate(props){
-    console.log(props)
+    //console.log(props)
     const renderStarRate = () => {
         const arr = []
         let i = 0
@@ -20,4 +21,8 @@ export default function Rate(props){
             {renderStarRate()}
         </div>
     )
+}
+
+Rate.propTypes = {
+    rate: propTypes.number.isRequired
 }

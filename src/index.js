@@ -2,7 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './Styles.css'
 import App from "./components/App";
+import Provider from "react-redux/src/components/Provider";
+import store from './components/redux/store'
 
 import {restaurants} from "./fixtures";
 
-ReactDOM.render(<App restaurants = {restaurants} />,document.getElementById('root'))
+ReactDOM.render(
+    <Provider store = {store}>
+    <App restaurants = {restaurants} />
+    </Provider>,
+    document.getElementById('root'))

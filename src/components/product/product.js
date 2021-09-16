@@ -11,12 +11,15 @@ function Product({product, count, increment, decrement}){
         <div key = {product.id} className={'wrapper'}>
             <div>
                 <p>{product.name}</p>
+                <div className={'wrapper'}>
                 {product.ingredients.map(ingredient => (<p>{ingredient}</p>))}
+                </div>
             </div>
             <p>{product.price} $</p>
             <div className={'wrapper'}>
+                <p>count  : </p>
                 <button onClick={decrement}> - </button>
-                <p> count  : {count}</p>
+                <p> {count}</p>
                 <button onClick={increment}> + </button>
             </div>
         </div>

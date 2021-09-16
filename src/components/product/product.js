@@ -1,12 +1,19 @@
 import React from 'react'
-import counter from "../hocs/counter";
 import '../../Styles.css'
 import propTypes from 'prop-types'
+import {connect} from "react-redux";
+import {decrement, increment} from "../redux/actions";
 
 
-function Product({product, count, increment, decrement}){
 
+function Product(
+    {
+        product,
+        amount = 0,
+        increment,
+        decrement,
 
+    }){
     return(
         <div key = {product.id} className={'wrapper'}>
             <div>
@@ -18,13 +25,12 @@ function Product({product, count, increment, decrement}){
             <p>{product.price} $</p>
             <div className={'wrapper'}>
                 <p>count  : </p>
-                <button onClick={decrement}> - </button>
-                <p> {count}</p>
-                <button onClick={increment}> + </button>
+                <button onClick={() => decrement(product.id)}> - </button>
+                <p> {amount}</p>
+                <button onClick={() => increment(product.id)}> + </button>
             </div>
         </div>
     )
-
 }
 
 Product.propTypes = {
@@ -34,9 +40,19 @@ Product.propTypes = {
             price: propTypes.number
         }
     ).isRequired,
-    count: propTypes.number,
+    amount: propTypes.number,
     increment: propTypes.func,
     decrement: propTypes.func
 }
+const mapStateToProps = (state,ownProps) => ({
+    amount : state.order[ownProps.product.id]
+})
 
-export default  counter (Product);
+const mapDispatchToProps = {
+    increment,
+    decrement
+}
+
+
+export default  connect(mapStateToProps,mapDispatchToProps)(Product);
+//export default  counter (Product);

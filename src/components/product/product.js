@@ -14,20 +14,21 @@ function Product(
         decrement,
 
     }){
+    const {id,name,price} = product
     return(
-        <div key = {product.id} className={'wrapper'}>
+        <div key = {id} className={'wrapper'}>
             <div>
-                <p>{product.name}</p>
+                <p>{name}</p>
                 <div className={'wrapper'}>
                 {product.ingredients.map(ingredient => (<p>{ingredient}</p>))}
                 </div>
             </div>
-            <p>{product.price} $</p>
+            <p>{price} $</p>
             <div className={'wrapper'}>
                 <p>count  : </p>
-                <button onClick={() => decrement(product.id)}> - </button>
+                <button onClick={() => decrement(id)}> - </button>
                 <p> {amount}</p>
-                <button onClick={() => increment(product.id)}> + </button>
+                <button onClick={() => increment(id)}> + </button>
             </div>
         </div>
     )

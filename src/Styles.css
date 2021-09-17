@@ -23,3 +23,13 @@ button{
 .review-block{
     padding-right: 20px;
 }
+.component-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-wrapper{
+    position: absolute;
+    min-width: 500px;
+    margin-top: 0px;
+    margin-left: 600px;
+}

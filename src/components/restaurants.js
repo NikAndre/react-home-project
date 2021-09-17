@@ -3,6 +3,7 @@ import Restaurant from "./restaraunt";
 import Navigation from "./navigation";
 import '../Styles.css'
 import propTypes from 'prop-types'
+import Cart from "./cart";
 
 
 
@@ -21,8 +22,12 @@ export default function Restaurants ({restaurants}){
                 restaurants = {restaurants}
                 onRestaurantClick = {(id) => {setActiveId(id)} }
             />
+            <div className={'component-wrapper'}>
             <Restaurant  restaurant = {activeRestaurant}  />
-
+            <Cart
+                restaurants = {restaurants}
+            />
+            </div>
         </div>
     )
 }

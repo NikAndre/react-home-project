@@ -12,7 +12,7 @@ function Restaurants (
     {
        restaurants
     }){
-    //console.log(restaurants)
+
 
     const [activeId, setActiveId] = useState(restaurants[0].id)
 

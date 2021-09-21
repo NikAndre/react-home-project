@@ -5,45 +5,39 @@ import {connect} from "react-redux";
 
 const CartProduct = (
     {
-        id,
-        amount,
+        product,
         increment,
         decrement,
         prodRemove
 
     }
     ) => {
+    console.log(product)
 
-    const productFromFixturesArray = restaurants.map(restaurant => {
-        return restaurant.menu
-    })
-        .flat()
-        .find(product => product.id = id)
-    //console.log(productFromFixturesArray)
 
     return (
-        <div key={productFromFixturesArray.id} className={'wrapper'}>
+        <div key={product.id} className={'wrapper'}>
             <div>
-                <p>{productFromFixturesArray.name}</p>
+                <p>{product.name}</p>
             </div>
             <span> Full price :</span>
-            <p>{productFromFixturesArray.price * amount} $</p>
+            <p>{product.subTotal} $</p>
             <div>
             <div className={'wrapper'}>
                 <span>count : </span>
-                <p> {amount}</p>
+                <p> {product.amount}</p>
             </div>
             <div className={'wrapper'}>
-                <button onClick={() => decrement(id)}> - </button>
-                <button onClick={() => increment(id)}> + </button>
-                <button onClick={() => prodRemove(id)}> x </button>
+                <button onClick={() => decrement(product.id)}> - </button>
+                <button onClick={() => increment(product.id)}> + </button>
+                <button onClick={() => prodRemove(product.id)}> x </button>
             </div>
             </div>
         </div>
     )
 }
 const mapStateToProps = (state,ownProps) => ({
-    amount : state.order[ownProps.id]
+
 })
 
 const mapDispatchToProps = {

@@ -1,36 +1,29 @@
 import React from "react";
-import propTypes from 'prop-types'
 import {connect} from "react-redux";
 import CartProduct from "./cart-product";
-
+import {orderProductsSelector,countTotalPriceSelector} from './redux/selectors'
 
 
 const Cart = (
     {
-        amount
+        products,
+        totalPrice
     }) => {
-    //console.log(amount)
 
-    const getId = Object.entries(amount).map(product =>{
-        return {
-            id: product[0],
-            amount: product[1]
-        }
-    })
-
-    //console.log(getId)
 
     return (
         <div className={'cart-wrapper'}>
             <h1>Cart</h1>
-            {getId.map((elem) => {
-                return <CartProduct key = {elem.id} id ={elem.id} amount={elem.amount}/>
+            {products.map((product) => {
+                return <CartProduct key ={product.id} product = {product}/>
             })}
+            <h2>Total price: {totalPrice}$</h2>
         </div>
     )
 }
 const mapStateToProps = (state,ownProps)=> ({
-    amount : state.order
+    products : orderProductsSelector(state),
+    totalPrice : countTotalPriceSelector(state)
 })
 
 

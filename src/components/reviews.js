@@ -1,15 +1,19 @@
 import React from "react";
 import Review from "./product/review";
+import {connect} from "react-redux";
 
-export default function Reviews (props){
+function Reviews ({ arrId }){
+
     return (
         <div>
             <h1>Reviews</h1>
             <div className={'wrapper'}>
             {
-                props.reviews.map((review)=> (<Review key = {review.id} review = {review}/>))
+                arrId.map((id)=> (<Review key = {id} id = {id}/>))
             }
             </div>
         </div>
     )
 }
+
+export default connect()(Reviews)

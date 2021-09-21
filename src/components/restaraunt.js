@@ -3,8 +3,9 @@ import Menu from "./menu";
 import Rate from "./rate";
 import Reviews from "./reviews";
 import propTypes from 'prop-types'
+import {connect} from "react-redux";
 
-export default function Restaurant({restaurant}){
+function Restaurant({restaurant}){
     const getRestaurantRating = () =>{
         const sumRating = restaurant.reviews.map((review) => {
             return review.rating
@@ -16,14 +17,14 @@ export default function Restaurant({restaurant}){
         return  sumRating/restaurant.reviews.length
     }
 
-    getRestaurantRating()
+
 
     return(
         <div>
-            <Menu menu = {restaurant.menu}/>
-            <Reviews reviews = {restaurant.reviews}/>
-            <h1>Restaurant rating</h1>
-            <Rate rate = {getRestaurantRating()}/>
+            <div>
+                <Menu menu = {restaurant.menu}/>
+                <Reviews arrId = {restaurant.reviews}/>
+            </div>
         </div>
     )
 }
@@ -34,3 +35,8 @@ Restaurant.propTypes ={
         reviews: propTypes.array.isRequired
     }).isRequired
 }
+
+
+
+
+export default connect()(Restaurant)

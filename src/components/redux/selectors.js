@@ -10,7 +10,6 @@ export const orderProductsSelector =  createSelector(
     orderSelector,
     (products,order) => {
 
-
     return  Object.keys(order).map(productId => products[productId])
         .map(product => {
             return {
@@ -28,3 +27,4 @@ export const countTotalPriceSelector  = createSelector(
        return   accum += product.subTotal
      },0)
 })
+

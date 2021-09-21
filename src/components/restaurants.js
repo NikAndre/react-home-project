@@ -5,6 +5,7 @@ import '../Styles.css'
 import propTypes from 'prop-types'
 import Cart from "./cart";
 import {connect} from "react-redux";
+import Rate from "./rate";
 
 
 
@@ -27,11 +28,17 @@ function Restaurants (
                 restaurants = {restaurants}
                 onRestaurantClick = {(id) => {setActiveId(id)} }
             />
+            <div className={'restaurant-name-wrapper'}>
+                <h2>{activeRestaurant.name}</h2>
+                <Rate reviewsId = {activeRestaurant.reviews}/>
+            </div>
             <div className={'component-wrapper'}>
-            <Restaurant  restaurant = {activeRestaurant}  />
-            <Cart
+                <Restaurant
+                    restaurant = {activeRestaurant}
+                />
+                <Cart
                 restaurants = {restaurants}
-            />
+                />
             </div>
         </div>
     )
@@ -43,5 +50,5 @@ Restaurants.propTypes = {
 }
 
 export default connect((state)=> ({
-    restaurants : state.restaurants
+    restaurants : state.restaurants,
 }))(Restaurants)

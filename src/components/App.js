@@ -13,7 +13,7 @@ export default class App extends  PureComponent {
 
     render() {
        return (
-           <div>
+           <div className={'container'}>
                <Restaurants  />
            </div>
        )

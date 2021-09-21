@@ -7,8 +7,8 @@ export default function  Menu ({menu}){
     return(
         <div>
             <h1>Menu</h1>
-            {menu.map((elem) => {
-                return <Product key = {elem.id} product ={elem}/>
+            {menu.map((id) => {
+                return <Product key = {id} id ={id}/>
             })}
         </div>
     )

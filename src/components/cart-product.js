@@ -14,7 +14,6 @@ const CartProduct = (
     ) => {
     console.log(product)
 
-
     return (
         <div key={product.id} className={'wrapper'}>
             <div>
@@ -36,9 +35,8 @@ const CartProduct = (
         </div>
     )
 }
-const mapStateToProps = (state,ownProps) => ({
-
-})
+const mapStateToProps = (state,ownProps) => ({}
+)
 
 const mapDispatchToProps = {
     increment,

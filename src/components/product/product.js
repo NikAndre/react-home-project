@@ -8,13 +8,14 @@ import {decrement, increment} from "../redux/actions";
 
 function Product(
     {
+        id,
         product,
         amount = 0,
         increment,
         decrement,
 
     }){
-    const {id,name,price} = product
+    const {name,price} = product
     return(
         <div key = {id} className={'wrapper'}>
             <div>
@@ -46,7 +47,8 @@ Product.propTypes = {
     decrement: propTypes.func
 }
 const mapStateToProps = (state,ownProps) => ({
-    amount : state.order[ownProps.product.id]
+    amount : state.order[ownProps.id],
+    product : state.products[ownProps.id]
 })
 
 const mapDispatchToProps = {

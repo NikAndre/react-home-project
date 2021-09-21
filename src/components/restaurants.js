@@ -4,11 +4,16 @@ import Navigation from "./navigation";
 import '../Styles.css'
 import propTypes from 'prop-types'
 import Cart from "./cart";
+import {connect} from "react-redux";
 
 
 
+function Restaurants (
+    {
+       restaurants
+    }){
+    //console.log(restaurants)
 
-export default function Restaurants ({restaurants}){
     const [activeId, setActiveId] = useState(restaurants[0].id)
 
     const activeRestaurant = useMemo(
@@ -36,3 +41,7 @@ Restaurants.propTypes = {
     id: propTypes.string.isRequired
 }).isRequired
 }
+
+export default connect((state)=> ({
+    restaurants : state.restaurants
+}))(Restaurants)

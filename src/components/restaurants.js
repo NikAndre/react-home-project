@@ -7,14 +7,10 @@ import Cart from "./cart";
 import {connect} from "react-redux";
 import Rate from "./rate";
 
-
-
 function Restaurants (
     {
        restaurants
     }){
-
-
     const [activeId, setActiveId] = useState(restaurants[0].id)
 
     const activeRestaurant = useMemo(

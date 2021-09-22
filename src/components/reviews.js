@@ -1,8 +1,22 @@
 import React from "react";
 import Review from "./product/review";
 import {connect} from "react-redux";
+import {addReview} from "./redux/actions";
 
-function Reviews ({ arrId }){
+
+function Reviews ({
+                      arrId,
+                      addReview
+                  }){
+
+    const  handleFormClick = (e) => {
+        e.preventDefault()
+        const name = e.target.name.value
+        const text = e.target.text.value
+        const rating = e.target.rating.value
+
+        addReview(name,text,rating)
+    }
 
     return (
         <div>
@@ -12,8 +26,21 @@ function Reviews ({ arrId }){
                 arrId.map((id)=> (<Review key = {id} id = {id}/>))
             }
             </div>
+            <div>
+                <h2>Leave your review</h2>
+                <form onSubmit={handleFormClick}>
+                    <input type={'text'}  name = {'name'} />
+                    <input type={'text'} name = {'text'} />
+                    <label>Rating</label>
+                    <input  name = {'rating'} type = {'number'}/>
+                    <button type={"submit"} > Отправить </button>
+                </form>
+            </div>
         </div>
     )
 }
-
-export default connect()(Reviews)
+const mapStateToProps = state =>  ({})
+const mapDispatchToProps =  {
+    addReview
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Reviews)

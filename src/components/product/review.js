@@ -10,7 +10,7 @@ function Review (
      user
     }
     ){
-    console.log(user)
+    //console.log(user)
     return (
         <div className={'review-block'}>
             <p>User: <b>{user.name}</b></p>
@@ -20,11 +20,9 @@ function Review (
     )
 }
 
-
 const mapStateToProps = (state,ownProps) => ({
     review : state.reviews[ownProps.id],
     user: state.users[state.reviews[ownProps.id].userId]
 })
-
 
 export default connect(mapStateToProps)(Review)

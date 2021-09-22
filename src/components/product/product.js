@@ -4,8 +4,6 @@ import propTypes from 'prop-types'
 import {connect} from "react-redux";
 import {decrement, increment} from "../redux/actions";
 
-
-
 function Product(
     {
         id,

@@ -6,13 +6,14 @@ import {connect} from "react-redux";
 function Review (
     {
      id,
-     review
+     review,
+     user
     }
     ){
-    //console.log(review)
+    console.log(user)
     return (
         <div className={'review-block'}>
-            <p>User: <b>{review.user}</b></p>
+            <p>User: <b>{user.name}</b></p>
             <p>Text: {review.text} </p>
             <Rate  reviewsId = {[review.id]}/>
         </div>
@@ -21,7 +22,8 @@ function Review (
 
 
 const mapStateToProps = (state,ownProps) => ({
-    review : state.reviews[ownProps.id]
+    review : state.reviews[ownProps.id],
+    user: state.users[state.reviews[ownProps.id].userId]
 })
 
 

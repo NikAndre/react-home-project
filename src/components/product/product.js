@@ -13,7 +13,6 @@ function Product(
         amount = 0,
         increment,
         decrement,
-
     }){
     const {name,price} = product
     return(
@@ -58,4 +57,3 @@ const mapDispatchToProps = {
 
 
 export default  connect(mapStateToProps,mapDispatchToProps)(Product);
-//export default  counter (Product);

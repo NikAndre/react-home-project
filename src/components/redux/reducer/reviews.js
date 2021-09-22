@@ -8,7 +8,7 @@ const defaultReviews =  normalizedReviews.reduce((accum , review)=>{
 
 export default (reviews = defaultReviews,action) => {
     const {type} = action
-    console.log(reviews)
+    //console.log(reviews)
     switch (type){
         default
         : return reviews

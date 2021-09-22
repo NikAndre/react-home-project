@@ -3,6 +3,7 @@ import orderReducer from  './order'
 import defaultRest from './restaurants'
 import defaultProd from './products'
 import defaultRev from './reviews'
+import defaultUsers from './users'
 
 
 const reducer = combineReducers(
@@ -11,7 +12,8 @@ const reducer = combineReducers(
         order : orderReducer,
         restaurants: defaultRest,
         products: defaultProd,
-        reviews: defaultRev
+        reviews: defaultRev,
+        users: defaultUsers
     }
 )
 

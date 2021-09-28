@@ -1,20 +1,26 @@
-import React from 'react'
+import React, {useMemo, useState} from 'react'
 import propTypes from 'prop-types'
 
-export default function Navigation (props){
+export default function Tabs({tabs}){
+
+    const [activeTab, setActiveTab] = useState(0)
+    console.log(tabs)
+    const {content} = tabs[activeTab]
+
     return(
-        <div className={'navigation-holder'}>
-            {props.restaurants.map((restaurant) => <button
-                key = {restaurant.id}
-                onClick = {() => props.onRestaurantClick(restaurant.id)}
-                className={''}
-            >
-                {restaurant.name}
-            </button> )}
-        </div>
+        <>
+            <div>
+                {tabs.map(({title},index)=>(
+                    <span
+                     key = {title}
+                    onClick={()=> setActiveTab(index)}
+                    >
+                        {title}
+                    </span>
+                ))}
+            </div>
+            {content}
+        </>
     )
 }
 
-Navigation.propTypes = {
-    restaurants: propTypes.array.isRequired
-}

@@ -13,10 +13,8 @@ export default store => next => action => {
                     userId: newUserId,
                     text : payload.text,
                     rating : payload.rating
-
                 }
              }
-
             return next(action)
         default
             : return  next(action)

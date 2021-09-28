@@ -4,6 +4,7 @@ import Rate from "./rate";
 import Reviews from "./reviews";
 import propTypes from 'prop-types'
 import {connect} from "react-redux";
+import Tabs from "./navigation";
 
 function Restaurant({restaurant}){
     const getRestaurantRating = () =>{
@@ -17,14 +18,14 @@ function Restaurant({restaurant}){
         return  sumRating/restaurant.reviews.length
     }
 
-
+    const tabs = [
+       {title: 'Menu' , content : <Menu menu = {restaurant.menu}/>},
+       {title: 'Reviews' , content : <Reviews arrId = {restaurant.reviews} />}
+    ]
 
     return(
         <div>
-            <div>
-                <Menu menu = {restaurant.menu}/>
-                <Reviews arrId = {restaurant.reviews}/>
-            </div>
+            <Tabs tabs={tabs}/>
         </div>
     )
 }

@@ -1,46 +1,91 @@
-button{
-    height: 20px;
-    margin:5px;
+button {
+  height: 20px;
+  margin: 5px;
 }
-.img-star{
-    width:20px;
-    height: 20px;
+.img-star {
+  width: 20px;
+  height: 20px;
 }
-.wrapper{
-    max-width: 500px;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 20px;
-    align-items: center;
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+.block-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-block {
+  width: 680px;
+  padding-left: 20px;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid bisque;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+.img-wrapper {
+  display: flex;
+  background: inherit;
 }
-.img-wrapper{
-    display: flex;
+.img-wrapper p img {
+  background: inherit;
 }
-.review-block{
-    padding-right: 20px;
+.review-block {
+  padding-right: 20px;
 }
-.component-wrapper{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+.component-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
-.cart-wrapper{
-    position: absolute;
-    min-width: 500px;
-    margin-top: 0px;
-    margin-left: 600px;
+.cart-wrapper {
+  box-sizing: border-box;
+  width: 500px;
 }
-.navigation-holder{
-    display: flex;
-    justify-content: center;
+.cart-product_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.restaurant-name-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.cart-product_wrapper_name {
+  width: 200px;
+}
+.cart-product_wrapper_fullprice {
+  width: 100px;
+}
+
+.cart-product_count-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 150px;
+}
+.cart-product_count-block button {
+  margin: 0px 5px;
+}
+.cart-product_count-block p {
+  margin: 0px 5px;
+}
+
+.navigation-holder {
+  display: flex;
+  justify-content: center;
+}
+.restaurant-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+
+  color: white;
+}
+.tab-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.tab-element {
+  padding: 0px 20px 10px;
 }

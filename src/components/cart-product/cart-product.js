@@ -1,48 +1,34 @@
 import React from "react";
-import {restaurants} from "../../fixtures";
-import {decrement, increment,prodRemove} from "../redux/actions";
-import {connect} from "react-redux";
+import { restaurants } from "../../fixtures";
+import { decrement, increment, prodRemove } from "../redux/actions";
+import { connect } from "react-redux";
 
-const CartProduct = (
-    {
-        product,
-        increment,
-        decrement,
-        prodRemove
+const CartProduct = ({ product, increment, decrement, prodRemove }) => {
+  console.log(product);
 
-    }
-    ) => {
-    console.log(product)
-
-    return (
-        <div key={product.id} className={'wrapper'}>
-            <div>
-                <p>{product.name}</p>
-            </div>
-            <span> Full price :</span>
-            <p>{product.subTotal} $</p>
-            <div>
-            <div className={'wrapper'}>
-                <span>count : </span>
-                <p> {product.amount}</p>
-            </div>
-            <div className={'wrapper'}>
-                <button onClick={() => decrement(product.id)}> - </button>
-                <button onClick={() => increment(product.id)}> + </button>
-                <button onClick={() => prodRemove(product.id)}> x </button>
-            </div>
-            </div>
-        </div>
-    )
-}
-const mapStateToProps = (state,ownProps) => ({}
-)
+  return (
+    <div key={product.id} className={"cart-product_wrapper"}>
+      <div className={"cart-product_wrapper_name"}>
+        <p>{product.name}</p>
+      </div>
+      <div className={"cart-product_count-block"}>
+        <button onClick={() => decrement(product.id)}> - </button>
+        <p> {product.amount}</p>
+        <button onClick={() => increment(product.id)}> + </button>
+        <button onClick={() => prodRemove(product.id)}> x </button>
+      </div>
+      <p className={"cart-product_wrapper_fullprice"}>
+        Price : {product.subTotal} $
+      </p>
+    </div>
+  );
+};
+const mapStateToProps = (state, ownProps) => ({});
 
 const mapDispatchToProps = {
-    increment,
-    decrement,
-    prodRemove
-}
+  increment,
+  decrement,
+  prodRemove,
+};
 
-
-export default  connect(mapStateToProps,mapDispatchToProps)(CartProduct);
+export default connect(mapStateToProps, mapDispatchToProps)(CartProduct);

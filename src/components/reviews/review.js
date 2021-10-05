@@ -1,5 +1,5 @@
 import React from "react";
-import Rate from "../rate";
+import Rate from "../rate/rate";
 import '../../Styles.css'
 import {connect} from "react-redux";
 

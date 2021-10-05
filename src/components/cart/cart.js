@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
-import CartProduct from "./cart-product";
-import {orderProductsSelector,countTotalPriceSelector} from './redux/selectors'
+import CartProduct from "../cart-product/cart-product";
+import {orderProductsSelector,countTotalPriceSelector} from '../redux/selectors'
 
 
 const Cart = (

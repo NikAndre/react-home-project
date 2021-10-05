@@ -1,6 +1,6 @@
 import React from "react";
-import star from  '../images/star2.jpg'
-import '../Styles.css'
+import star from '../../images/star2.jpg'
+import '../../Styles.css'
 import propTypes from 'prop-types'
 import {connect} from "react-redux";
 

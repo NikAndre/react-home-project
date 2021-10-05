@@ -1,6 +1,6 @@
 import React from "react";
-import {restaurants} from "../fixtures";
-import {decrement, increment,prodRemove} from "./redux/actions";
+import {restaurants} from "../../fixtures";
+import {decrement, increment,prodRemove} from "../redux/actions";
 import {connect} from "react-redux";
 
 const CartProduct = (

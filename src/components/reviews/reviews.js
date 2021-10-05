@@ -1,7 +1,7 @@
 import React from "react";
-import Review from "./product/review";
+import Review from "./review";
 import {connect} from "react-redux";
-import {addReview} from "./redux/actions";
+import {addReview} from "../redux/actions";
 
 
 function Reviews ({

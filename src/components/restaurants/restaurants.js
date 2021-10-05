@@ -1,11 +1,11 @@
 import React,{useState,useMemo} from 'react'
-import Restaurant from "./restaraunt";
-import Navigation from "./navigation";
-import '../Styles.css'
+import Restaurant from "../restaurant/restaraunt";
+import Navigation from "../navigation/navigation";
+import '../../Styles.css'
 import propTypes from 'prop-types'
-import Cart from "./cart";
+import Cart from "../cart/cart";
 import {connect} from "react-redux";
-import Tabs from "./navigation";
+import Tabs from "../navigation/navigation";
 
 function Restaurants (
     {

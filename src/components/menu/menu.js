@@ -1,7 +1,7 @@
 import React from 'react';
-import Product from "./product/product";
+import Product from "../product/product";
 import propTypes from 'prop-types'
-import Cart from "./cart";
+import Cart from "../cart/cart";
 
 
 export default function  Menu ({menu}){

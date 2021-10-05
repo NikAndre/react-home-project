@@ -1,10 +1,10 @@
 import React from "react";
-import Menu from "./menu";
-import Rate from "./rate";
-import Reviews from "./reviews";
+import Menu from "../menu/menu";
+import Rate from "../rate/rate";
+import Reviews from "../reviews/reviews";
 import propTypes from 'prop-types'
 import {connect} from "react-redux";
-import Tabs from "./navigation";
+import Tabs from "../navigation/navigation";
 
 function Restaurant({restaurant}){
     const getRestaurantRating = () =>{

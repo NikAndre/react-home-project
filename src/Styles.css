@@ -1,91 +1,91 @@
 button {
-  height: 20px;
-  margin: 5px;
+    height: 20px;
+    margin: 5px;
 }
 .img-star {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 .wrapper {
-  display: flex;
-  justify-content: space-around;
-  padding-right: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 20px;
 }
 .block-wrapper {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .menu-block {
-  width: 680px;
-  padding-left: 20px;
+    width: 680px;
+    padding-left: 20px;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  border: 1px solid bisque;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid bisque;
 }
 .img-wrapper {
-  display: flex;
-  background: inherit;
+    display: flex;
+    background: inherit;
 }
 .img-wrapper p img {
-  background: inherit;
+    background: inherit;
 }
 .review-block {
-  padding-right: 20px;
+    padding-right: 20px;
 }
 .component-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
 .cart-wrapper {
-  box-sizing: border-box;
-  width: 500px;
+    box-sizing: border-box;
+    width: 500px;
 }
 .cart-product_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .cart-product_wrapper_name {
-  width: 200px;
+    width: 200px;
 }
 .cart-product_wrapper_fullprice {
-  width: 100px;
+    width: 100px;
 }
 
 .cart-product_count-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 150px;
 }
 .cart-product_count-block button {
-  margin: 0px 5px;
+    margin: 0px 5px;
 }
 .cart-product_count-block p {
-  margin: 0px 5px;
+    margin: 0px 5px;
 }
 
 .navigation-holder {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .restaurant-name-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
 
-  color: white;
+    color: white;
 }
 .tab-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 .tab-element {
-  padding: 0px 20px 10px;
+    padding: 0px 20px 10px;
 }

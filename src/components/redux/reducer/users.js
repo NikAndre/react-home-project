@@ -1,16 +1,14 @@
-import { normalizedUsers } from "../../../fixtures";
+import { normalizedUsers } from '../../../fixtures';
 
-const defaultUsers =  normalizedUsers.reduce((accum , user)=>{
-    accum[user.id] = user
-    return accum
-},{})
+const defaultUsers = normalizedUsers.reduce((accum, user) => {
+    accum[user.id] = user;
+    return accum;
+}, {});
 
-
-export default (users = defaultUsers,action) => {
-    const {type} = action
-    //console.log(users)
-    switch (type){
-        default
-        : return users
+export default (users = defaultUsers, action) => {
+    const { type } = action;
+    switch (type) {
+        default:
+            return users;
     }
-}
+};
